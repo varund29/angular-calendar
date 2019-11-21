@@ -1,0 +1,121 @@
+.week-title {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: black;
+    /*   grid-auto-rows: 200px; */
+    margin: auto;
+    width: 60%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.date-title {
+    background-color: black;
+    margin: auto;
+    width: 35%;
+    float: right;
+}
+
+.date-title-main {
+    align-content: center;
+    text-align: right;
+    background-color: black;
+    /*   grid-auto-rows: 200px; */
+    margin: auto;
+    width: 60%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    height: 55px;;
+}
+
+.weekItem {
+    width: 150px;
+    margin: 5px;   
+    /*  border: solid 1px #555; */
+    background-color: gray;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: cursive;  
+    color: whitesmoke;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: black;
+    /*   grid-auto-rows: 200px; */
+    margin: auto;
+    width: 60%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.cardListItem {
+    width: 150px;
+    margin: 5px;
+    height: 150px;
+    padding: 10px;
+    /*  border: solid 1px #555; */
+    background-color: black;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* .cardListItem:hover {
+    background-color: darkgray;
+    box-shadow: 0 0px 3px 3px #fff;
+    -moz-box-shadow: 0 0px 3px 3px #fff;
+    -webkit-box-shadow: 0 0px 3px 3px #fff;
+    -o-box-shadow: 0 0px 3px 3px #fff;
+    cursor: pointer;
+} */
+
+.cardListItem.hover {
+    background-color: darkgray;
+    box-shadow: 0 0px 3px 3px #fff;
+    -moz-box-shadow: 0 0px 3px 3px #fff;
+    -webkit-box-shadow: 0 0px 3px 3px #fff;
+    -o-box-shadow: 0 0px 3px 3px #fff;
+    cursor: pointer;
+}
+
+.cardListItem.day:hover {
+    box-shadow: 0 0px 3px 3px #fff;
+}
+
+.cardListItem.notallow {
+    cursor: not-allowed;
+}
+
+.cardListItem.not-allow {
+    cursor: not-allowed;
+}
+
+.cardListItem.sunday {
+    background-color: rgb(146, 81, 57);
+    cursor: not-allowed;
+}
+
+.cardListItem.holiday {
+    background-color: rgb(168, 146, 23);
+    cursor: not-allowed;
+}
+
+.cardListItem.current-date {
+    background-color: rgb(85, 139, 85)
+}
+
+.index-number {
+    font-size: 72px;
+    font-family: cursive;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 15px;
+    height: 5px;
+}
