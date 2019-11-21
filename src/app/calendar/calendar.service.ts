@@ -37,8 +37,6 @@ export class CalendarService {
     this.loadCalenderForMonth();
   }
 
-
-
   getHolidays() {
     let m = this.selectedMonth;
     let y = this.selectedYear
