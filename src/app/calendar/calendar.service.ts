@@ -1,22 +1,13 @@
 
 import { Injectable, ChangeDetectorRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CalendarService {
 
   cell: any = [];
   weeks: any = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  holidays: any = ['26-1-2019-Republic Day', '4-3-2019-Maha Shivaratri', '6-4-2019-Ugadi', '14-4-2019-Ambedkar Jayanti',
-    '14-4-2019-Rama Navami', '19-4-2019-Good Friday', '5-6-2019-Eid al-Fitr', '15-8-2019-Independence Day', '10-9-2019-Ashura',
-    '2-10-2019-Gandhi Jayanti', '8-10-2019-Dussehra', '27-10-2019-Diwali', '9-11-2019-Mawlid', '25-12-2019-Christmas Day',
-
-    '26-1-2020-Republic Day', '4-3-2020-Maha Shivaratri', '6-4-2020-Ugadi', '14-4-2020-Ambedkar Jayanti',
-    '14-4-2020-Rama Navami', '19-4-2020-Good Friday', '5-6-2020-Eid al-Fitr', '15-8-2020-Independence Day', '10-9-2020-Ashura',
-    '2-10-2020-Gandhi Jayanti', '8-10-2020-Dussehra', '27-10-2020-Diwali', '9-11-2020-Mawlid', '25-12-2020-Christmas Day',
-
-    '26-1-2021-Republic Day', '4-3-2021-Maha Shivaratri', '6-4-2021-Ugadi', '14-4-2021-Ambedkar Jayanti',
-    '14-4-2021-Rama Navami', '19-4-2021-Good Friday', '5-6-2021-Eid al-Fitr', '15-8-2021-Independence Day', '10-9-2021-Ashura',
-    '2-10-2021-Gandhi Jayanti', '8-10-2021-Dussehra', '27-10-2021-Diwali', '9-11-2021-Mawlid', '25-12-2021-Christmas Day'];
+  holidays: any = [];
 
   months: any = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   years: any = [1993, 2019, 2020, 2021];
@@ -25,7 +16,7 @@ export class CalendarService {
   selectedLocation = 0;
   selectedMonth = 0;
   selectedYear = 0;
-  constructor() {
+  constructor(public _http: HttpClient) {
 
     let today = new Date();
     const mm = today.getMonth() + 1;
@@ -34,16 +25,40 @@ export class CalendarService {
     this.selectedMonth = mm;
     this.selectedYear = yyyy;
     console.log(this.selectedMonth, this.selectedYear)
-    
-    this.loadCalenderForMonth();
+    this.readHolidaysJson().then(result => {
+      this.holidays = result;
+      this.loadCalenderForMonth();
+    }
+    );
+
   }
 
+  readHolidaysJson() {
+
+    let promise = new Promise((resolve, reject) => {
+      let apiURL = `assets/holidays.json`;
+      this._http.get(apiURL)
+        .toPromise()
+        .then(
+          res => {
+            resolve(res);
+          }
+        );
+    });
+    return promise;
+  }
   getHolidays() {
     let m = this.selectedMonth;
-    let y = this.selectedYear
-    return this.holidays.filter(function (el) {
-      return el.indexOf(m + "-" + y) > -1;
-    });
+    let y = this.selectedYear  
+    for(let i=0;i<Object.keys(this.holidays).length;i++) {
+      let loc=this.holidays[i][this.locations[this.selectedLocation]]      
+      if(loc){
+        return loc.filter(function (el) {
+          return el.day.indexOf(m + "-" + y) > -1;
+        });
+      }
+    }
+   
   }
   getCssclass(i, isSeleted) {
     // console.log(i,"isSeleted=",isSeleted)
@@ -68,11 +83,11 @@ export class CalendarService {
   private returnIsCurrentDay(i: any) {
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
-    let currentDate = dd + '-' + (today.getMonth()+1) + '-' + today.getFullYear();
+    let currentDate = dd + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     let todayDate = i + '-' + this.selectedMonth + '-' + this.selectedYear;
-    console.log("todayDate=",todayDate, currentDate)
-  
-    return todayDate==currentDate;
+    //console.log("todayDate=",todayDate, currentDate)
+
+    return todayDate == currentDate;
   }
 
   public loadCalenderForMonth() {
@@ -106,7 +121,7 @@ export class CalendarService {
     let holidays = this.getHolidays();
     let isHoliday = false;
     holidays.forEach(element => {
-      if (parseInt(element.split("-")[0]) == index) {
+      if (parseInt(element.day.split("-")[0]) == index) {
         isHoliday = true;
       }
     });
@@ -116,8 +131,8 @@ export class CalendarService {
   private returnHolidays(holidays: any[], index: number) {
     let holies: any = [];
     holidays.forEach(element => {
-      if (parseInt(element.split("-")[0]) == index) {
-        holies.push(element.split("-")[3]);
+      if (parseInt(element.day.split("-")[0]) == index) {
+        holies.push(element.day.split("-")[3]);
       }
     });
     return holies;

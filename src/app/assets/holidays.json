@@ -1,128 +1,428 @@
-[
-  {
-    "day": "26-1-2019-Republic Day"
-  },
-  {
-    "day": "4-3-2019-Maha Shivaratri"
-  },
-  {
-    "day": "6-4-2019-Ugadi"
-  },
-  {
-    "day": "14-4-2019-Ambedkar Jayanti"
-  },
-  {
-    "day": "14-4-2019-Rama Navami"
-  },
-  {
-    "day": "19-4-2019-Good Friday"
-  },
-  {
-    "day": "5-6-2019-Eid al-Fitr"
-  },
-  {
-    "day": "15-8-2019-Independence Day"
-  },
-  {
-    "day": "10-9-2019-Ashura"
-  },
-  {
-    "day": "2-10-2019-Gandhi Jayanti"
-  },
-  {
-    "day": "8-10-2019-Dussehra"
-  },
-  {
-    "day": "27-10-2019-Diwali"
-  },
-  {
-    "day": "9-11-2019-Mawlid"
-  },
-  {
-    "day": "25-12-2019-Christmas Day"
-  },
-  {
-    "day": "26-1-2020-Republic Day"
-  },
-  {
-    "day": "4-3-2020-Maha Shivaratri"
-  },
-  {
-    "day": "6-4-2020-Ugadi"
-  },
-  {
-    "day": "14-4-2020-Ambedkar Jayanti"
-  },
-  {
-    "day": "14-4-2020-Rama Navami"
-  },
-  {
-    "day": "19-4-2020-Good Friday"
-  },
-  {
-    "day": "5-6-2020-Eid al-Fitr"
-  },
-  {
-    "day": "15-8-2020-Independence Day"
-  },
-  {
-    "day": "10-9-2020-Ashura"
-  },
-  {
-    "day": "2-10-2020-Gandhi Jayanti"
-  },
-  {
-    "day": "8-10-2020-Dussehra"
-  },
-  {
-    "day": "27-10-2020-Diwali"
-  },
-  {
-    "day": "9-11-2020-Mawlid"
-  },
-  {
-    "day": "25-12-2020-Christmas Day"
-  },
-  {
-    "day": "26-1-2021-Republic Day"
-  },
-  {
-    "day": "4-3-2021-Maha Shivaratri"
-  },
-  {
-    "day": "6-4-2021-Ugadi"
-  },
-  {
-    "day": "14-4-2021-Ambedkar Jayanti"
-  },
-  {
-    "day": "14-4-2021-Rama Navami"
-  },
-  {
-    "day": "19-4-2021-Good Friday"
-  },
-  {
-    "day": "5-6-2021-Eid al-Fitr"
-  },
-  {
-    "day": "15-8-2021-Independence Day"
-  },
-  {
-    "day": "10-9-2021-Ashura"
-  },
-  {
-    "day": "2-10-2021-Gandhi Jayanti"
-  },
-  {
-    "day": "8-10-2021-Dussehra"
-  },
-  {
-    "day": "27-10-2021-Diwali"
-  },
-  {
-    "day": "9-11-2021-Mawlid"
-  },
-  {
-    "day": "25-12-2021-Christmas Day"
-  }
-]
+[{
+    "Bangalore": [{
+            "day": "4-3-2019-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2019-Ugadi"
+        },
+        {
+            "day": "14-4-2019-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2019-Rama Navami"
+        },
+        {
+            "day": "26-1-2020-Republic Day"
+        },
+        {
+            "day": "4-3-2020-Maha Shivaratri"
+        },
+        {
+            "day": "14-4-2020-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2020-Rama Navami"
+        },
+        {
+            "day": "19-4-2020-Good Friday"
+        },
+        {
+            "day": "15-8-2020-Independence Day"
+        },
+        {
+            "day": "10-9-2020-Ashura"
+        },
+        {
+            "day": "2-10-2020-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2020-Dussehra"
+        },
+        {
+            "day": "27-10-2020-Diwali"
+        },
+        {
+            "day": "9-11-2020-Mawlid"
+        },
+        {
+            "day": "5-6-2021-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2021-Independence Day"
+        },
+        {
+            "day": "10-9-2021-Ashura"
+        },
+        {
+            "day": "2-10-2021-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2021-Dussehra"
+        },
+        {
+            "day": "27-10-2021-Diwali"
+        },
+        {
+            "day": "9-11-2021-Mawlid"
+        },
+        {
+            "day": "25-12-2021-Christmas Day"
+        }
+    ],
+    "Chennai": [{
+            "day": "26-1-2019-Republic Day"
+        },
+        {
+            "day": "4-3-2019-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2019-Ugadi"
+        },
+        {
+            "day": "14-4-2019-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2019-Rama Navami"
+        },
+        {
+            "day": "19-4-2019-Good Friday"
+        },
+        {
+            "day": "5-6-2019-Eid al-Fitr"
+        },
+        {
+            "day": "9-11-2019-Mawlid"
+        },
+        {
+            "day": "25-12-2019-Christmas Day"
+        },
+        {
+            "day": "26-1-2020-Republic Day"
+        },
+        {
+            "day": "4-3-2020-Maha Shivaratri"
+        },
+        {
+            "day": "19-4-2020-Good Friday"
+        },
+        {
+            "day": "5-6-2020-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2020-Independence Day"
+        },
+        {
+            "day": "10-9-2020-Ashura"
+        },
+        {
+            "day": "2-10-2020-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2020-Dussehra"
+        },
+        {
+            "day": "27-10-2020-Diwali"
+        },
+        {
+            "day": "9-11-2020-Mawlid"
+        },
+        {
+            "day": "25-12-2020-Christmas Day"
+        },
+        {
+            "day": "10-9-2021-Ashura"
+        },
+        {
+            "day": "2-10-2021-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2021-Dussehra"
+        },
+        {
+            "day": "27-10-2021-Diwali"
+        },
+        {
+            "day": "9-11-2021-Mawlid"
+        },
+        {
+            "day": "25-12-2021-Christmas Day"
+        }
+    ],
+    "Hyderabad": [{
+            "day": "26-1-2019-Republic Day"
+        },
+        {
+            "day": "4-3-2019-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2019-Ugadi"
+        },
+        {
+            "day": "14-4-2019-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2019-Rama Navami"
+        },
+        {
+            "day": "19-4-2019-Good Friday"
+        },
+        {
+            "day": "5-6-2019-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2019-Independence Day"
+        },
+        {
+            "day": "14-4-2020-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2020-Rama Navami"
+        },
+        {
+            "day": "19-4-2020-Good Friday"
+        },
+        {
+            "day": "5-6-2020-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2020-Independence Day"
+        },
+        {
+            "day": "10-9-2020-Ashura"
+        },
+        {
+            "day": "2-10-2020-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2020-Dussehra"
+        },
+        {
+            "day": "8-10-2021-Dussehra"
+        },
+        {
+            "day": "27-10-2021-Diwali"
+        },
+        {
+            "day": "9-11-2021-Mawlid"
+        },
+        {
+            "day": "25-12-2021-Christmas Day"
+        }
+    ],
+    "Noida": [{
+            "day": "26-1-2019-Republic Day"
+        },
+        {
+            "day": "4-3-2019-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2019-Ugadi"
+        },
+        {
+            "day": "14-4-2019-Ambedkar Jayanti"
+        },
+        {
+            "day": "5-6-2019-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2019-Independence Day"
+        },
+        {
+            "day": "10-9-2019-Ashura"
+        },
+        {
+            "day": "2-10-2019-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2019-Dussehra"
+        },
+        {
+            "day": "27-10-2019-Diwali"
+        },
+        {
+            "day": "9-11-2019-Mawlid"
+        },
+        {
+            "day": "25-12-2019-Christmas Day"
+        },
+        {
+            "day": "26-1-2020-Republic Day"
+        },
+        {
+            "day": "14-4-2020-Rama Navami"
+        },
+        {
+            "day": "19-4-2020-Good Friday"
+        },
+        {
+            "day": "27-10-2020-Diwali"
+        },
+        {
+            "day": "9-11-2020-Mawlid"
+        },
+        {
+            "day": "25-12-2020-Christmas Day"
+        },
+        {
+            "day": "26-1-2021-Republic Day"
+        },
+        {
+            "day": "4-3-2021-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2021-Ugadi"
+        },
+        {
+            "day": "14-4-2021-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2021-Rama Navami"
+        },
+        {
+            "day": "19-4-2021-Good Friday"
+        },
+        {
+            "day": "2-10-2021-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2021-Dussehra"
+        },
+        {
+            "day": "27-10-2021-Diwali"
+        },
+        {
+            "day": "9-11-2021-Mawlid"
+        },
+        {
+            "day": "25-12-2021-Christmas Day"
+        }
+    ],
+    "Pune": [{
+            "day": "26-1-2019-Republic Day"
+        },
+        {
+            "day": "4-3-2019-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2019-Ugadi"
+        },
+        {
+            "day": "14-4-2019-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2019-Rama Navami"
+        },
+        {
+            "day": "19-4-2019-Good Friday"
+        },
+        {
+            "day": "5-6-2019-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2019-Independence Day"
+        },
+        {
+            "day": "10-9-2019-Ashura"
+        },
+        {
+            "day": "2-10-2019-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2019-Dussehra"
+        },
+        {
+            "day": "27-10-2019-Diwali"
+        },
+        {
+            "day": "9-11-2019-Mawlid"
+        },
+        {
+            "day": "25-12-2019-Christmas Day"
+        },
+        {
+            "day": "26-1-2020-Republic Day"
+        },
+        {
+            "day": "4-3-2020-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2020-Ugadi"
+        },
+        {
+            "day": "14-4-2020-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2020-Rama Navami"
+        },
+        {
+            "day": "19-4-2020-Good Friday"
+        },
+        {
+            "day": "5-6-2020-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2020-Independence Day"
+        },
+        {
+            "day": "10-9-2020-Ashura"
+        },
+        {
+            "day": "2-10-2020-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2020-Dussehra"
+        },
+        {
+            "day": "27-10-2020-Diwali"
+        },
+        {
+            "day": "9-11-2020-Mawlid"
+        },
+        {
+            "day": "25-12-2020-Christmas Day"
+        },
+        {
+            "day": "26-1-2021-Republic Day"
+        },
+        {
+            "day": "4-3-2021-Maha Shivaratri"
+        },
+        {
+            "day": "6-4-2021-Ugadi"
+        },
+        {
+            "day": "14-4-2021-Ambedkar Jayanti"
+        },
+        {
+            "day": "14-4-2021-Rama Navami"
+        },
+        {
+            "day": "19-4-2021-Good Friday"
+        },
+        {
+            "day": "5-6-2021-Eid al-Fitr"
+        },
+        {
+            "day": "15-8-2021-Independence Day"
+        },
+        {
+            "day": "10-9-2021-Ashura"
+        },
+        {
+            "day": "2-10-2021-Gandhi Jayanti"
+        },
+        {
+            "day": "8-10-2021-Dussehra"
+        },
+        {
+            "day": "27-10-2021-Diwali"
+        },
+        {
+            "day": "9-11-2021-Mawlid"
+        },
+        {
+            "day": "25-12-2021-Christmas Day"
+        }
+    ]
+
+}]
