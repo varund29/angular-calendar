@@ -34,6 +34,7 @@ export class CalendarService {
     this.selectedMonth = mm;
     this.selectedYear = yyyy;
     console.log(this.selectedMonth, this.selectedYear)
+    
     this.loadCalenderForMonth();
   }
 
