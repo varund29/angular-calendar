@@ -1,6 +1,7 @@
 
 import { Injectable, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import jsonHolidays from '/assets/holidays.json';
 
 @Injectable()
 export class CalendarService {
@@ -24,12 +25,13 @@ export class CalendarService {
     this.selectedLocation = 0;
     this.selectedMonth = mm;
     this.selectedYear = yyyy;
-    console.log(this.selectedMonth, this.selectedYear)
-    this.readHolidaysJson().then(result => {
+    console.log(this.selectedMonth, this.selectedYear);
+    this.holidays=jsonHolidays;
+   /*  this.readHolidaysJson().then(result => {
       this.holidays = result;
       this.loadCalenderForMonth();
     }
-    );
+    ); */
 
   }
 
