@@ -1,14 +1,13 @@
 
 import { Injectable, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import jsonHolidays from '../assets/holidays.json';
 
 @Injectable()
 export class CalendarService {
 
   cell: any = [];
   weeks: any = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  holidays: any = jsonHolidays;
+  holidays: any = [];
 
   months: any = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   years: any = [1993, 2019, 2020, 2021];
@@ -25,13 +24,12 @@ export class CalendarService {
     this.selectedLocation = 0;
     this.selectedMonth = mm;
     this.selectedYear = yyyy;
-    console.log(this.selectedMonth, this.selectedYear);
-     this.loadCalenderForMonth();
-     /*  this.readHolidaysJson().then(result => {
+    console.log(this.selectedMonth, this.selectedYear)
+    this.readHolidaysJson().then(result => {
       this.holidays = result;
       this.loadCalenderForMonth();
     }
-    ); */
+    );
 
   }
 
