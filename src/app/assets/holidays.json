@@ -1,5 +1,6 @@
 [{
-    "Bangalore": [{
+    "Bangalore": [
+      {
             "day": "4-3-2019-Maha Shivaratri"
         },
         {
@@ -69,7 +70,8 @@
             "day": "25-12-2021-Christmas Day"
         }
     ],
-    "Chennai": [{
+    "Chennai": [
+      {
             "day": "26-1-2019-Republic Day"
         },
         {
@@ -148,7 +150,8 @@
             "day": "25-12-2021-Christmas Day"
         }
     ],
-    "Hyderabad": [{
+    "Hyderabad": [
+      {
             "day": "26-1-2019-Republic Day"
         },
         {
@@ -209,7 +212,8 @@
             "day": "25-12-2021-Christmas Day"
         }
     ],
-    "Noida": [{
+    "Noida": [
+      {
             "day": "26-1-2019-Republic Day"
         },
         {
@@ -297,7 +301,8 @@
             "day": "25-12-2021-Christmas Day"
         }
     ],
-    "Pune": [{
+    "Pune": [
+      {
             "day": "26-1-2019-Republic Day"
         },
         {
@@ -424,5 +429,4 @@
             "day": "25-12-2021-Christmas Day"
         }
     ]
-
 }]
