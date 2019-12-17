@@ -12,7 +12,7 @@ export class CalendarService {
 
   months: any = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   years: any = [1993, 2019, 2020, 2021];
-  locations: any = ['Bangalore', 'Chennai', 'Hyderabad', 'Noida', 'Pune'];
+  locations: any = ['Bangalore', 'Chennai', 'Hyderabad','Gurugram', 'Noida', 'Pune'];
   totalCell = 0;
   selectedLocation = 0;
   selectedMonth = 0;
@@ -108,11 +108,13 @@ export class CalendarService {
     }
 
     let holidays = this.getHolidays();
+    console.log("holidays=",holidays)
 
     for (let i = 0; i < daysInMonth; i++ , index++) {
       const displayLabel = (i + 1);
 
       let holies = this.returnHolidays(holidays, (i + 1));
+       console.log("holies=",holies)
       if (this.returnIsCurrentDay(i + 1)) {
         holies.push(this.getTime());
       }
@@ -124,7 +126,9 @@ export class CalendarService {
     let holidays = this.getHolidays();
     let isHoliday = false;
     holidays.forEach(element => {
-      if (parseInt(element.day.split("-")[0]) == index) {
+      let day=parseInt(element.day.split("-")[0]);
+      let month=parseInt(element.day.split("-")[1])
+      if (day == index && month==this.selectedMonth) {
         isHoliday = true;
       }
     });
@@ -134,7 +138,9 @@ export class CalendarService {
   private returnHolidays(holidays: any[], index: number) {
     let holies: any = [];
     holidays.forEach(element => {
-      if (parseInt(element.day.split("-")[0]) == index) {
+      let day=parseInt(element.day.split("-")[0]);
+      let month=parseInt(element.day.split("-")[1])
+      if (day == index && month==this.selectedMonth) {
         holies.push(element.day.split("-")[3]);
       }
     });
