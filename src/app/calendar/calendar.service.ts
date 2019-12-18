@@ -25,7 +25,7 @@ export class CalendarService {
     this.selectedLocation = 0;
     this.selectedMonth = mm;
     this.selectedYear = yyyy;
-    console.log("jsonHolidays",jsonHolidays);
+   // console.log("jsonHolidays",jsonHolidays);
     this.holidays=jsonHolidays;
     this.loadCalenderForMonth();
   /*   this.readHolidaysJson().then(result => {
@@ -33,7 +33,7 @@ export class CalendarService {
       this.loadCalenderForMonth();
     } 
     );*/
-
+    setInterval(() => this.loadCalenderForMonth(),5000);
   }
 
   readHolidaysJson() {
@@ -93,7 +93,8 @@ export class CalendarService {
     return todayDate == currentDate;
   }
 
-  public loadCalenderForMonth() {
+  public loadCalenderForMonth():void {
+   
     this.cell = [];
 
     let firstDayOfMonth = this.getFirstDayOfMonthForYear();
@@ -108,13 +109,13 @@ export class CalendarService {
     }
 
     let holidays = this.getHolidays();
-    console.log("holidays=",holidays)
+   // console.log("holidays=",holidays)
 
     for (let i = 0; i < daysInMonth; i++ , index++) {
       const displayLabel = (i + 1);
 
       let holies = this.returnHolidays(holidays, (i + 1));
-       console.log("holies=",holies)
+      // console.log("holies=",holies)
       if (this.returnIsCurrentDay(i + 1)) {
         holies.push(this.getTime());
       }
@@ -227,7 +228,7 @@ export class CalendarService {
       this.cell[index].isSeleted = false;
     }
     //this.cell[index].isSeleted = !this.cell[index].isSeleted;
-    console.log("css=", this.getCssclass(day, this.cell[index].isSeleted))
+   // console.log("css=", this.getCssclass(day, this.cell[index].isSeleted))
     this.cell[index].cssClass = this.getCssclass(day, this.cell[index].isSeleted);
 
 
