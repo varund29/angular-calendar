@@ -17,6 +17,7 @@ export class CalendarService {
   selectedLocation = 0;
   selectedMonth = 0;
   selectedYear = 0;
+
   constructor(public _http: HttpClient) {
 
     let today = new Date();
@@ -33,7 +34,7 @@ export class CalendarService {
       this.loadCalenderForMonth();
     } 
     );*/
-    setInterval(() => this.loadCalenderForMonth(),5000);
+    setInterval(() => this.loadCalenderForMonth(),60000);
   }
 
   readHolidaysJson() {
