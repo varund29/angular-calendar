@@ -24,7 +24,7 @@
 			"day": "2-10-2019-Gandhi Jayanti"
 		},
 		{
-			"day": "7-10-2019-Maha Navami"
+			"day": "7-10-2019-Maha Navami,Ayudhapooja"
 		},
 		{
 			"day": "1-11-2019-Karnataka Rajyotsava"
@@ -63,8 +63,12 @@
 			"day": "25-12-2020-Christmas Day"
 		}
 	],
-	"Chennai": [{
+	"Chennai": [
+    {
 			"day": "1-1-2019-New Year"
+		},
+    {
+			"day": "15-1-2019-Pongal"
 		},
 		{
 			"day": "19-4-2019-Good Friday"
@@ -85,10 +89,7 @@
 			"day": "2-10-2019-Gandhi Jayanti"
 		},
 		{
-			"day": "8-10-2019-Dussheraa"
-		},
-		{
-			"day": "28-10-2019-Diwali (Padva)"
+			"day": "7-10-2019-Ayutha Pooja"
 		},
 		{
 			"day": "25-12-2019-Christmas Day"
@@ -149,10 +150,7 @@
 			"day": "2-10-2019-Gandhi Jayanti"
 		},
 		{
-			"day": "7-10-2019-Ayutha Pooja"
-		},
-		{
-			"day": "12-11-2019-Guru Nanak's Birthday"
+			"day": "28-10-2019-Diwali"
 		},
 		{
 			"day": "25-12-2019-Christmas Day"
@@ -223,13 +221,10 @@
 			"day": "1-1-2019-New Year"
 		},
 		{
-			"day": "15-1-2019-Pongal"
+			"day": "21-3-2019-Holi"
 		},
 		{
 			"day": "19-4-2019-Good Friday"
-		},
-		{
-			"day": "1-5-2019-Labour Day"
 		},
 		{
 			"day": "5-6-2019-Ramzan Id(Idu'l Fitr)"
@@ -244,7 +239,7 @@
 			"day": "2-10-2019-Gandhi Jayanti"
 		},
 		{
-			"day": "7-10-2019-Ayutha Pooja"
+			"day": "8-10-2019-Dussehra"
 		},
 		{
 			"day": "12-11-2019-Guru Nanak's Birthday"
@@ -287,9 +282,6 @@
 			"day": "1-1-2019-New Year"
 		},
 		{
-			"day": "15-1-2019-Pongal"
-		},
-		{
 			"day": "19-4-2019-Good Friday"
 		},
 		{
@@ -308,10 +300,10 @@
 			"day": "2-10-2019-Gandhi Jayanti"
 		},
 		{
-			"day": "7-10-2019-Ayutha Pooja"
+			"day": "8-10-2019-Dussheraa"
 		},
 		{
-			"day": "12-11-2019-Guru Nanak's Birthday"
+			"day": "28-10-2019-Diwali (Padva)"
 		},
 		{
 			"day": "25-12-2019-Christmas Day"
