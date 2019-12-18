@@ -11,7 +11,7 @@ export class CalendarService {
   holidays: any = [];
 
   months: any = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  years: any = [1993, 2019, 2020, 2021];
+  years: any = [2020, 2019];
   locations: any = ['Bangalore', 'Chennai', 'Hyderabad','Gurugram', 'Noida', 'Pune'];
   totalCell = 0;
   selectedLocation = 0;
