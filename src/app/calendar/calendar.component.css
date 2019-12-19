@@ -30,6 +30,8 @@ height: 55px;
 .select-fm{
   width: 0px !important;
   flex: 0 0 20%!important;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .weekItem {
@@ -143,4 +145,13 @@ a:hover {
 .next {
   background-color: #4CAF50;
   color: white; 
+}
+.btn-primary{
+  margin-right: 0px;
+}
+.btn-r{
+margin-right: 5px;
+}
+.btn-l{
+margin-left: 5px;
 }
