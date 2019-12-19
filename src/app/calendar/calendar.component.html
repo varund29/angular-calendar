@@ -1,21 +1,27 @@
 <div class="date-title-main">
 <div class="date-title">
     <div class="row">
-     <div class="col-sm-4">       
+         <button  class="btn btn-primary" (click)="prevLocation()">&laquo; </button> 
+        <div class="col-sm-4 select-fm">       
                 <select class='form-control' [(ngModel)]='caln.selectedLocation' (change)="onLocationSelect($event)">
                     <option value="{{i}}" *ngFor="let l of caln.locations;let i=index;">{{l}}</option>
                 </select>          
         </div>
-        <div class="col-sm-4">       
+           <button  class="btn btn-primary" (click)="nextLocation()">&raquo; </button> 
+           <button  class="btn btn-primary" (click)="prevYear()">&laquo; </button> 
+        <div class="col-sm-4 select-fm">       
                 <select class='form-control' [(ngModel)]='caln.selectedYear' (change)="onYearSelect($event)">
-                    <option value="{{y}}" *ngFor="let y of caln.years;let i=index;">{{y}}</option>
+                    <option value="{{i}}" *ngFor="let y of caln.years;let i=index;">{{y}}</option>
                 </select>          
-        </div>
-        <div class="col-sm-4">          
+        </div>         
+          <button  class="btn btn-primary" (click)="nextYear()">&raquo; </button> 
+          <button  class="btn btn-primary" (click)="prevMonth()">&laquo; </button> 
+          <div class="col-sm-4 select-fm">                       
                 <select class='form-control' [(ngModel)]='caln.selectedMonth' (change)="onMonthSelect($event)">
                     <option value="{{i+1}}" *ngFor="let m of caln.months;let i=index;">{{m}}</option>
-                </select>         
-        </div>
+                </select>                    
+          </div>
+         <button  class="btn btn-primary" (click)="nextMonth()" >&raquo; </button>  
     </div>
 </div>
 </div>

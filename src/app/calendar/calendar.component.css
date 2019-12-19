@@ -11,22 +11,25 @@
 }
 
 .date-title {
-    background-color: black;
-    margin: auto;
-    width: 35%;
-    float: right;
+   background-color:black;
+margin: auto;
+width: 75%;
+float: right;
 }
 
 .date-title-main {
     align-content: center;
-    text-align: right;
-    background-color: black;
-    /*   grid-auto-rows: 200px; */
-    margin: auto;
-    width: 60%;
-    /* border: 3px solid green; */
-    padding: 10px;
-    height: 55px;;
+text-align: right;
+background-color:black;
+margin: auto;
+width: 60%;
+padding: 10px;
+height: 55px;
+}
+
+.select-fm{
+  width: 0px !important;
+  flex: 0 0 20%!important;
 }
 
 .weekItem {
@@ -118,4 +121,25 @@
 p {
     font-size: 15px;
     height: 5px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 8px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white; 
 }

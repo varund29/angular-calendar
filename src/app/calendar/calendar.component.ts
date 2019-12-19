@@ -38,4 +38,22 @@ export class CalendarComponent implements OnInit {
   onCellClick(index,day) {
    this.caln.onCellClick(index,day);
   }
+  prevLocation(){
+    this.caln.prevLocation();
+  }
+  nextLocation(){
+ this.caln.nextLocation();
+  }
+  prevYear(){
+ this.caln.prevYear();
+  }
+  nextYear(){
+ this.caln.nextYear();
+  }
+  prevMonth(){
+ this.caln.prevMonth();
+  }
+  nextMonth(){
+ this.caln.nextMonth();
+  }
 }

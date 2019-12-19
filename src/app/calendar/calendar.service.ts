@@ -11,7 +11,7 @@ export class CalendarService {
   holidays: any = [];
 
   months: any = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  years: any = [2020, 2019];
+  years: any = [2019,2020];
   locations: any = ['Bangalore', 'Chennai', 'Hyderabad','Gurugram', 'Noida', 'Pune'];
   totalCell = 0;
   selectedLocation = 0;
@@ -25,7 +25,7 @@ export class CalendarService {
     const yyyy = today.getFullYear();
     this.selectedLocation = 0;
     this.selectedMonth = mm;
-    this.selectedYear = yyyy;
+    this.selectedYear = this.years.indexOf(yyyy) ;
    // console.log("jsonHolidays",jsonHolidays);
     this.holidays=jsonHolidays;
     this.loadCalenderForMonth();
@@ -53,7 +53,7 @@ export class CalendarService {
   }
   getHolidays() {
     let m = this.selectedMonth;
-    let y = this.selectedYear  
+    let y = this.years[this.selectedYear]//this.selectedYear  
     for(let i=0;i<Object.keys(this.holidays).length;i++) {
       let loc=this.holidays[i][this.locations[this.selectedLocation]]      
       if(loc){
@@ -88,7 +88,7 @@ export class CalendarService {
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
     let currentDate = dd + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
-    let todayDate = i + '-' + this.selectedMonth + '-' + this.selectedYear;
+    let todayDate = i + '-' + this.selectedMonth + '-' + this.years[this.selectedYear];//this.selectedYear;
     //console.log("todayDate=",todayDate, currentDate)
 
     return todayDate == currentDate;
@@ -152,7 +152,7 @@ export class CalendarService {
     let isWeekEnd = [false, false]
 
     let myDate = new Date();
-    myDate.setFullYear(this.selectedYear);
+    myDate.setFullYear(this.years[this.selectedYear]);
     myDate.setMonth(this.selectedMonth - 1);
     myDate.setDate(index);
 
@@ -193,7 +193,7 @@ export class CalendarService {
     return hour + ":" + min + " " + ampm
   }
   daysInThisMontForYear() {
-    return new Date(this.selectedYear, this.selectedMonth, 0).getDate();
+    return new Date(this.years[this.selectedYear], this.selectedMonth, 0).getDate();
   }
 
   geDaysInMonth(month, year) {
@@ -202,7 +202,7 @@ export class CalendarService {
 
   getFirstDayOfMonthForYear() {
 
-    return this.weeks.findIndex(x => x === new Date(this.selectedYear, (this.selectedMonth - 1), 1).toString().split(' ')[0]);
+    return this.weeks.findIndex(x => x === new Date(this.years[this.selectedYear], (this.selectedMonth - 1), 1).toString().split(' ')[0]);
   }
   isValidNumber(day) {
     if (day) {
@@ -233,5 +233,62 @@ export class CalendarService {
     this.cell[index].cssClass = this.getCssclass(day, this.cell[index].isSeleted);
 
 
+  }
+  
+  prevLocation(){
+//months: 
+ // years:
+  //this.selectedLocation = 0;
+   // this.selectedMonth = mm;
+   // this.selectedYear = yyyy;
+   let setLoc=this.selectedLocation-1;
+   if(setLoc<0){
+     setLoc++;
+   }
+  this.selectedLocation = setLoc ;
+  this.loadCalenderForMonth();
+  }
+  nextLocation(){
+  
+ let setLoc=this.selectedLocation+1;
+  
+   if(setLoc>=this.locations.length){
+     setLoc--;
+   }
+  this.selectedLocation = setLoc ;
+  this.loadCalenderForMonth();
+  }
+  prevYear(){
+     let setYr=this.selectedYear-1;
+   if(setYr<0){
+     setYr++;
+   }
+  this.selectedYear = setYr ;
+  this.loadCalenderForMonth();
+
+  }
+  nextYear(){
+  let setYr=this.selectedYear+1;
+   if(setYr>=this.years.length){
+     setYr--;
+   }
+  this.selectedYear = setYr ;
+  this.loadCalenderForMonth();
+  }
+  prevMonth(){
+   let setMn=this.selectedMonth-1;
+   if(setMn<1){
+     setMn++;
+   }
+  this.selectedMonth = setMn ;
+  this.loadCalenderForMonth();
+  }
+  nextMonth(){
+     let setMn=this.selectedMonth+1;
+   if(setMn>=(this.months.length+1)){
+     setMn--;
+   }
+  this.selectedMonth = setMn ;
+  this.loadCalenderForMonth();
   }
 }
