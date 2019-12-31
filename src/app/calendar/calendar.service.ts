@@ -228,15 +228,10 @@ export class CalendarService {
   }
   
   prevLocation(){
-//months: 
- // years:
-  //this.selectedLocation = 0;
-   // this.selectedMonth = mm;
-   // this.selectedYear = yyyy;
    let setLoc=this.selectedLocation;
    setLoc--;
    if(setLoc<0){
-     setLoc++;
+   setLoc=this.locations.length-1;
    }
   this.selectedLocation = setLoc ;
   this.loadCalenderForMonth();
@@ -246,7 +241,7 @@ export class CalendarService {
  let setLoc=this.selectedLocation;
   setLoc++;
    if(setLoc>=this.locations.length){
-     setLoc--;
+    setLoc=0;
    }
   this.selectedLocation = setLoc ;
   this.loadCalenderForMonth();
@@ -255,7 +250,7 @@ export class CalendarService {
      let setYr=this.selectedYear;
        setYr--
    if(setYr<0){
-     setYr++;
+      setYr=this.years.length-1;
    }
   this.selectedYear = setYr ;
   this.loadCalenderForMonth();
@@ -265,7 +260,7 @@ export class CalendarService {
   let setYr=this.selectedYear;
   setYr++;
    if(setYr>=this.years.length){
-     setYr--;
+     setYr=0;
    }
   this.selectedYear = setYr ;
   this.loadCalenderForMonth();
@@ -274,7 +269,7 @@ export class CalendarService {
    let setMn=this.selectedMonth;
    setMn--;
    if(setMn<1){
-     setMn++;
+   setMn=this.months.length;
    }
 
   this.selectedMonth = setMn ;
@@ -284,7 +279,7 @@ export class CalendarService {
      let setMn=this.selectedMonth;
      setMn++;  
    if(setMn>=(this.months.length+1)){
-     setMn--;
+     setMn=1;
    }
 
   this.selectedMonth = setMn ;
