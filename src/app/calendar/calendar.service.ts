@@ -150,17 +150,9 @@ export class CalendarService {
   }
   private returnIsWeekEnd(index: number) {
     let isWeekEnd = [false, false]
-
-    let myDate = new Date();
-    myDate.setFullYear(this.years[this.selectedYear]);
-    myDate.setMonth(this.selectedMonth - 1);
-    myDate.setDate(index);
-
-    /*  if (myDate.getDay() == 6 || myDate.getDay() == 0) 
-     {
-       isWeekEnd = [true, false];
-     }; */
-
+    let setMn=this.selectedMonth;
+    setMn--;    
+    let myDate = new Date(parseInt(this.years[this.selectedYear]),setMn,index);   
     if (myDate.getDay() == 0) {
       isWeekEnd = [true, false];
     }
@@ -284,17 +276,17 @@ export class CalendarService {
    if(setMn<1){
      setMn++;
    }
+
   this.selectedMonth = setMn ;
   this.loadCalenderForMonth();
   }
   nextMonth(){
      let setMn=this.selectedMonth;
-     setMn++;
-      console.log("selectedMonth=",setMn,this.selectedMonth,this.months.length)
+     setMn++;  
    if(setMn>=(this.months.length+1)){
      setMn--;
    }
-  
+
   this.selectedMonth = setMn ;
   this.loadCalenderForMonth();
   }
