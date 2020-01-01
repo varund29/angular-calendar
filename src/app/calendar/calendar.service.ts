@@ -86,10 +86,10 @@ export class CalendarService {
   }
   private returnIsCurrentDay(i: any) {
     const today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
+    const dd = today.getDate();
     let currentDate = dd + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     let todayDate = i + '-' + this.selectedMonth + '-' + this.years[this.selectedYear];//this.selectedYear;
-    //console.log("todayDate=",todayDate, currentDate)
+    console.log("todayDate=",todayDate, currentDate, dd)
 
     return todayDate == currentDate;
   }
